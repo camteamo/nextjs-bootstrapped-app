@@ -1,0 +1,110 @@
+/* Custom Flower and Heart Animations */
+@keyframes float-down {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+
+.flower {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff69b4, #ff1493, #dc143c);
+  animation: float-down linear infinite, sway 3s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+.flower:nth-child(2n) {
+  background: radial-gradient(circle, #dda0dd, #da70d6, #ba55d3);
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 0 8px rgba(218, 112, 214, 0.5);
+}
+
+.flower:nth-child(3n) {
+  background: radial-gradient(circle, #ffb6c1, #ff69b4, #ff1493);
+  width: 28px;
+  height: 28px;
+  box-shadow: 0 0 12px rgba(255, 182, 193, 0.5);
+}
+
+.flower:nth-child(4n) {
+  background: radial-gradient(circle, #e6e6fa, #dda0dd, #da70d6);
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 0 6px rgba(230, 230, 250, 0.5);
+}
+
+.heart {
+  position: absolute;
+  font-size: 24px;
+  animation: float-down linear infinite, sway 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 105, 180, 0.6));
+}
+
+.heart:nth-child(2n) {
+  font-size: 20px;
+  animation-duration: 15s, 5s;
+}
+
+.heart:nth-child(3n) {
+  font-size: 28px;
+  animation-duration: 18s, 6s;
+}
+
+/* Romantic glow effects */
+@keyframes romantic-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.6);
+  }
+}
+
+.romantic-glow {
+  animation: romantic-glow 3s ease-in-out infinite;
+}
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(-45deg, #ff69b4, #ff1493, #da70d6, #ba55d3);
+  background-size: 400% 400%;
+  animation: gradient-shift 4s ease infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

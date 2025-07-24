@@ -100,7 +100,7 @@ export default function YouTubePlayer() {
       
       setSongs(prev => [newSong, ...prev]);
       setSearchQuery("");
-    } catch (err) {
+    } catch {
       setError("Error al buscar la canción");
     } finally {
       setLoading(false);
@@ -148,7 +148,7 @@ export default function YouTubePlayer() {
   return (
     <div className="w-full max-w-2xl mx-auto p-6 bg-card/20 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10">
       <h2 className="text-3xl font-bold mb-6 text-center text-white bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-        🎵 Elige tu música, mi amor 🎵
+         elige tu música, mi amor 
       </h2>
 
       {/* Buscador */}
@@ -230,7 +230,7 @@ export default function YouTubePlayer() {
       </div>
 
       <div className="mt-6 text-center text-white/60 text-sm">
-        <p>💝 Cada canción me recuerda a ti, Camila 💝</p>
+        <p>te amo</p>
       </div>
     </div>
   );

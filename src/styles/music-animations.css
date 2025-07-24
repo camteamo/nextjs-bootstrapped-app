@@ -1,0 +1,102 @@
+/* Animaciones para ondas musicales */
+@keyframes equalizer {
+  0% {
+    height: 20px;
+  }
+  50% {
+    height: 60px;
+  }
+  100% {
+    height: 20px;
+  }
+}
+
+@keyframes wave-pulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 0.3;
+  }
+}
+
+@keyframes music-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes wave-flow {
+  0% {
+    transform: translateX(-100%) scaleY(1);
+  }
+  50% {
+    transform: translateX(0%) scaleY(1.5);
+  }
+  100% {
+    transform: translateX(100%) scaleY(1);
+  }
+}
+
+@keyframes audio-visualizer {
+  0% {
+    height: 10px;
+    background: linear-gradient(to top, #ec4899, #a855f7);
+  }
+  25% {
+    height: 40px;
+    background: linear-gradient(to top, #a855f7, #ec4899);
+  }
+  50% {
+    height: 60px;
+    background: linear-gradient(to top, #ec4899, #8b5cf6);
+  }
+  75% {
+    height: 30px;
+    background: linear-gradient(to top, #8b5cf6, #ec4899);
+  }
+  100% {
+    height: 10px;
+    background: linear-gradient(to top, #ec4899, #a855f7);
+  }
+}
+
+.music-wave {
+  animation: wave-pulse 3s ease-in-out infinite;
+}
+
+.music-note {
+  animation: music-bounce 2s ease-in-out infinite;
+}
+
+.ripple-effect {
+  animation: ripple 2s ease-out infinite;
+}
+
+.wave-flow {
+  animation: wave-flow 4s ease-in-out infinite;
+}
+
+.audio-bar {
+  animation: audio-visualizer 0.5s ease-in-out infinite alternate;
+}
